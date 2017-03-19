@@ -1,0 +1,233 @@
+html {
+  font-size: 18px;
+  font-family: Helvetica;
+  color:white
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header {
+  align-items: center;
+  width: 100%;
+}
+
+#header .header-content {
+  display: inline-flex;
+  background-color: black;
+  padding: 0.33rem 0rem .33rem 4rem;
+  margin: auto;
+  align-items: center;
+  height: 2.32rem;
+  width: 100%
+}
+
+#header img {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+#header h4 {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+#banner {
+  height: 25rem;
+  margin: 0;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#banner .banner-content {
+  margin-top: 9rem;
+  background-color: black;
+  height: 12.5rem;
+  width: 24rem;
+  margin-left: 4rem;
+}
+
+#banner h4 {
+  margin-left: 3rem;
+  margin-top: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#banner h1 {
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#nav .nav-content {
+  margin: 0;
+  background-color: firebrick;
+  flex: 1;
+  text-align: justify;
+  padding-left: 4rem;
+}
+
+#nav li {
+  display: inline-flex;
+  padding: 0.75rem 1.2rem;
+}
+
+#nav a {
+  text-decoration: none;
+  color: white;
+}
+
+#middle-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#images img {
+  border: 4px solid black;
+  height: 9rem;
+  width: 9rem;
+  padding: 2rem;
+  margin: 0 1rem;
+}
+
+#pen, #watch, #thermal {
+  background-color: black;
+  text-align: center;
+  width: 11rem;
+  border: 2px solid black;
+  margin-left: 1rem;
+  padding: 1rem 1rem;
+  margin-bottom: 3rem;
+}
+
+#glasses img {
+  height: 5rem;
+  width: 9rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+#info .location {
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+#location {
+  margin-left: 4rem;
+  padding: 1rem 4rem 1rem 2rem;
+  background-color: black;
+  width: 10rem;
+}
+
+#hours {
+  margin-left: 13.6rem;
+  padding: 1rem 4rem 1rem 2rem;
+  background-color: black;
+  width: 10rem;
+}
+
+#place {
+  color: black;
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#place .place-content {
+  display: inline-flex;
+  /*width: 35%;*/
+}
+
+#place #lat-long {
+  margin-left: 4rem;
+}
+
+#place #time {
+  margin-left: 20rem;
+}
+
+footer {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 7rem;
+  width: 100%;
+  background-color: black;
+  margin-top: 4rem;
+  padding-left: 4rem
+}
+
+@media only screen and (max-width: 1024px){
+
+    padding-left: 0;
+  }
+  #header .header-content {
+    padding-left: 0;
+  }
+  #banner .banner-content {
+    margin-left: 0;
+  }
+  #images img, #pen, #watch, #thermal {
+    width: 47%;
+    height: auto;
+  }
+  #location, #hours {
+    width: 35%;
+    height: auto;
+  }
+  #location, #place #lat-long  {
+    margin-left: 0;
+  }
+  #place #time {
+    margin-left: 14rem;
+  }
+}
+
+@media and (max-width:470px){
+  #nav .content {
+    display: none;
+  }
+  footer {
+    text-align: center;
+  }
+  #images img, #pen, #watch, #thermal {
+    width: 90%;
+    height: auto;
+  }
+  #banner h4 {
+    font-size: 0.77rem;
+  }
+  #banner {
+    padding-top: 1rem;
+    padding-left: 2rem
+  }
+  #banner h1 {
+    font-size: 1rem;
+  }
+  #header img {
+    height: 10rem;
+    width: auto;
+  }

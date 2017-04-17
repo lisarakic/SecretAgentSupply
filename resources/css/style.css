@@ -1,12 +1,13 @@
 html {
   font-size: 18px;
   font-family: Helvetica;
-  color:white
+  color: white;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #header {
@@ -39,54 +40,51 @@ html {
 
 #banner {
   height: 25rem;
-  margin: 0;
+  margin-top: 0;
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-top: 2px solid black;
+  border-bottom: 2px solid firebrick;
 }
 
-
-#banner .banner-content {
+.banner-content {
   margin-top: 9rem;
   background-color: black;
-  height: 12.5rem;
-  width: 24rem;
+  width: 25rem;
   margin-left: 4rem;
 }
 
 #banner h4 {
-  margin-left: 3rem;
-  margin-top: 4rem;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
   font-size: 1rem;
   font-weight: bold;
 }
 
 #banner h1 {
-  margin-left: 3rem;
-  margin-top: 1rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
   font-size: 2rem;
   font-weight: bold;
 }
 
 #nav {
-  display: inline-flex;
-  flex-wrap: wrap;
+background-color: firebrick;
   width: 100%;
   font-size: 1rem;
 }
 
-#nav .nav-content {
+.nav-content {
   margin: 0;
   background-color: firebrick;
-  flex: 1;
-  text-align: justify;
-  padding-left: 4rem;
 }
 
 #nav li {
   display: inline-flex;
-  padding: 0.75rem 1.2rem;
+  padding: 0.75rem 2rem;
 }
 
 #nav a {
@@ -102,22 +100,16 @@ html {
   width: 100%;
 }
 
+#images {
+  margin-bottom: -.125rem
+}
+
 #images img {
   border: 4px solid black;
   height: 9rem;
   width: 9rem;
   padding: 2rem;
   margin: 0 1rem;
-}
-
-#pen, #watch, #thermal {
-  background-color: black;
-  text-align: center;
-  width: 11rem;
-  border: 2px solid black;
-  margin-left: 1rem;
-  padding: 1rem 1rem;
-  margin-bottom: 3rem;
 }
 
 #glasses img {
@@ -127,46 +119,86 @@ html {
   padding-top: 4rem;
 }
 
-#info .location {
-  display: flex;
-  width: 100%;
+#pen {
+  background-color: black;
+  text-align: center;
+  width: 13.45rem;
+  height: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: -1.05rem;
+  margin-right: -.5rem;
+}
+
+#watch {
+  background-color: black;
+  text-align: center;
+  width: 13.45rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: .95rem;
+
+}
+#thermal {
+  background-color: black;
+  text-align: center;
+  width: 13.45rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: .45rem;
+  margin-right: -.515rem;
+}
+
+#text {
+  margin-top: 0;
+  width: 44.33rem;
+  margin-bottom: 3rem;
   font-size: 1rem;
-  margin-top: 3rem;
+}
+
+#info .location {
+  display: inline-flex;
+  /*flex-wrap: wrap;*/
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
   align-items: center;
 }
 
 #location {
-  margin-left: 4rem;
+  margin-left: 6.5rem;
   padding: 1rem 4rem 1rem 2rem;
   background-color: black;
-  width: 10rem;
+  width: 35%;
 }
 
 #hours {
   margin-left: 13.6rem;
+  margin-right: 7rem;
   padding: 1rem 4rem 1rem 2rem;
   background-color: black;
-  width: 10rem;
-}
-
-#place {
-  color: black;
-  display: flex;
-  width: 100%;
-  font-size: 1rem;
+  width: 35%;
 }
 
 #place .place-content {
   display: inline-flex;
-  /*width: 35%;*/
+  width: 100%;
 }
 
-#place #lat-long {
-  margin-left: 4rem;
+#lat-long, #time {
+  color: black;
+  display: flex;
+  width: 35%;
+  font-size: 1rem;
+}
+
+ #place #lat-long {
+  margin-left: 6.5rem;
 }
 
 #place #time {
-  margin-left: 20rem;
+  margin-left: 13.75rem;
+  margin-right: 7rem;
 }
 
 footer {
@@ -182,8 +214,6 @@ footer {
 
 @media only screen and (max-width: 1024px){
 
-    padding-left: 0;
-  }
   #header .header-content {
     padding-left: 0;
   }
@@ -193,6 +223,9 @@ footer {
   #images img, #pen, #watch, #thermal {
     width: 47%;
     height: auto;
+  }
+  #watch, #thermal, #glasses, #cellular  {
+    display: none;
   }
   #location, #hours {
     width: 35%;
@@ -206,7 +239,7 @@ footer {
   }
 }
 
-@media and (max-width:470px){
+@media and (max-width: 470px){
   #nav .content {
     display: none;
   }

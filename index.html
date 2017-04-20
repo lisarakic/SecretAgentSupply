@@ -24,6 +24,9 @@
       </div>
     </div>
 
+   <div class="menu">  <!--when screen is less than 1024px-->
+     <a href="#">Menu</a>
+   </div>
     <div id="nav" class="flex-container">
       <div class="nav-content">
      <nav>
@@ -56,13 +59,22 @@
     <div><img src="resources/images/pen.png"></div>
       <div id="cellular"><img src="resources/images/watch.png"></div>
       <div id="glasses"><img src="resources/images/glasses.png"></div>
-  </div>
+    </div>
 
-  <<div id="text" class="flex-container">
+  <div id="text" class="flex-container">
     <div id="pen">Exploding Pen</div>
     <div id="watch">Cellular Watch</div>
     <div id="thermal">Thermal Glasses</div>
   </div>
+</div>
+
+<div class="mediumScreenLayout"> <!--Layout for when screen max-width is 1074px-->
+    <div><img src="resources/images/pen.png"><div id=penMediumScreen>Exploding Pen</div></div>
+    <div><img src="resources/images/watch.png"><div id=watchMediumScreen>Cellular Watch</div></div>
+</div>
+
+<div class="mobile-only"> <!--Layout for mobile screen-->
+ <div><img src="resources/images/pen.png"><div id=penMobile-only>Exploding Pen</div></div>
 </div>
 
    <div id="info" class="flex-container">
@@ -78,6 +90,16 @@
        <div id="time">0800 - 1800</div>
      </div>
    </div>
+
+<div class="infoMediumScreenLayout"> <!--Layout for when screen max-width is 1074x-->
+<div>  <div id="locationMediumScreenLayout">Location</div><div id="lat-longMediumScreen">-47.346436, 84.32354</div></div>
+<div>  <div id="hoursMediumScreenLayout">Hours</div><div id="timeMediumScreen">0800 - 1800</div></div>
+</div>
+
+<div class="infoMobile-only"> <!--Layout for mobile screen-->
+  <div>  <div id="locationMobile-only">Location</div><div id="lat-longMobile-only">-47.346436, 84.32354</div></div>
+  <div>  <div id="hoursMobile-only">Hours</div><div id="timeMobile-only">0800 - 1800</div></div>
+</div>
 
    <footer>
      <div id="copyright" class="flex-container">

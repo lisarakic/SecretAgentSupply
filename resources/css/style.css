@@ -71,6 +71,18 @@ html {
   font-weight: bold;
 }
 
+@media screen and (min-width: 1024px){
+.menu, .mediumScreenLayout, .infoMediumScreenLayout {
+  display: none;
+}
+}
+
+@media screen and (min-width: 470px){
+  .mediumScreenLayout, .infoMediumScreenLayout, .mobile-only, .infoMobile-only {
+    display: none;
+  }
+}
+
 #nav {
 background-color: firebrick;
   width: 100%;
@@ -126,8 +138,8 @@ background-color: firebrick;
   height: auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-left: -1.05rem;
-  margin-right: -.5rem;
+  margin-left: -.75rem;
+  margin-right: -.65rem;
 }
 
 #watch {
@@ -136,7 +148,7 @@ background-color: firebrick;
   width: 13.45rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-left: .95rem;
+  margin-left: 1.25rem;
 
 }
 #thermal {
@@ -145,8 +157,8 @@ background-color: firebrick;
   width: 13.45rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-left: .45rem;
-  margin-right: -.515rem;
+  margin-left: .65rem;
+  margin-right: -.75rem;
 }
 
 #text {
@@ -158,7 +170,6 @@ background-color: firebrick;
 
 #info .location {
   display: inline-flex;
-  /*flex-wrap: wrap;*/
   width: 100%;
   height: auto;
   font-size: 1rem;
@@ -220,47 +231,153 @@ footer {
   #banner .banner-content {
     margin-left: 0;
   }
-  #images img, #pen, #watch, #thermal {
-    width: 47%;
-    height: auto;
-  }
-  #watch, #thermal, #glasses, #cellular  {
+ .nav-content {
     display: none;
   }
-  #location, #hours {
-    width: 35%;
-    height: auto;
+  .menu {
+    background-color: firebrick;
+    text-align: center;
+    padding: 0.75rem 2rem;
   }
-  #location, #place #lat-long  {
-    margin-left: 0;
+  .menu a {
+    text-decoration: none;
+    color: white;
   }
-  #place #time {
-    margin-left: 14rem;
+  .mediumScreenLayout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content:space-between;
+    margin-bottom: 3rem;
   }
+  .mediumScreenLayout img {
+    border: 4px solid black;
+    height: 9rem;
+    width: 9rem;
+    padding: 2rem 7rem;
+  }
+  #penMediumScreen, #watchMediumScreen{
+    background-color: black;
+    height: 2rem;
+    width: 23rem;
+    text-align: center;
+    padding-right: .45rem;
+    padding-top: .5rem;
+    margin-top: -.25rem
+  }
+  #middle-content, #info, #place {
+    display: none;
+  }
+.infoMediumScreenLayout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#locationMediumScreenLayout{
+  background-color: black;
+  width: 14rem;
+  height: 3rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+#hoursMediumScreenLayout {
+  background-color: black;
+  width: 14rem;
+  height: 3rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
 }
 
-@media and (max-width: 470px){
-  #nav .content {
-    display: none;
-  }
+#lat-longMediumScreen, #timeMediumScreen{
+  color:black;
+}
+footer {
+  padding-left: 0;
+}
+@media only screen and (max-width: 470px){
+  .mediumScreenLayout, .infoMediumScreenLayout {
+     display: none;
+   }
   footer {
-    text-align: center;
+    padding-left: 4rem;
   }
-  #images img, #pen, #watch, #thermal {
-    width: 90%;
-    height: auto;
+  #images img, #pen, #watch, #thermal, #cellular, #glasses, #info, #place {
+    display:none;
+  }
+  #banner {
+    height: 15rem;
   }
   #banner h4 {
     font-size: 0.77rem;
   }
-  #banner {
-    padding-top: 1rem;
-    padding-left: 2rem
+  .banner-content {
+      margin-bottom: 0rem;
+      background-color: black;
+      width: 100%;
+      margin-left: 0rem;
+      margin-top: 10rem;
+      margin-bottom: 0rem;
   }
   #banner h1 {
     font-size: 1rem;
   }
   #header img {
-    height: 10rem;
+    height: 1.5rem;
     width: auto;
+  }
+  .menu {
+    margin-top: 2.5rem;
+  }
+  .mobile-only {
+    width: 100%;
+  }
+  .mobile-only img {
+    border: 3px solid black;
+    height: 9rem;
+    width: 9rem;
+    padding: 2rem 7rem;
+    margin: 3rem 1rem 0rem 1rem;
+  }
+  #penMobile-only {
+    background-color: black;
+    height: 2rem;
+    width: 23.35rem;
+    padding-top: 1rem;
+    margin-top: -.5rem;
+    margin-left: 1rem;
+    text-align: center;
+  }
+  .infoMobile-only {
+     display: flex;
+     flex-direction: column;
+     margin-top: 3rem;
+     margin-bottom: 1rem;
+  }
+  #locationMobile-only {
+    background-color: black;
+    width: 21.35rem;
+    height: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #hoursMobile-only {
+    background-color: black;
+    width: 21.35rem;
+    height: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    margin-left: 1rem;
+  }
+  #lat-longMobile-only {
+    color: black;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  #timeMobile-only {
+    color: black;
+    margin-left: 1rem;
   }
